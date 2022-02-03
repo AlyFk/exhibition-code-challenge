@@ -1,0 +1,47 @@
+{
+  "data": {
+    "id": 9252,
+    "api_model": "exhibitions",
+    "api_link": "https://api.artic.edu/api/v1/exhibitions/9252",
+    "title": "Iterations",
+    "is_featured": false,
+    "description": "The Art Institute of Chicago proudly presents Iterations, a series of new performance commissions that underline the wide range of artistic practices and attitudes in performance today. New works by Alexandra Bachzetsis, Math Bass, Cevdet Erek, Ralph Lemon, Paulina Olowska, Cally Spooner and Evelyn T. Wang\u2014anchored in choreography, sound art, spoken word performance, installation, music, gesture and movement research\u2014explore how performance practice is situated in the context of the Art Institute of Chicago, in our distinct spaces and amid our wide-ranging collection. Unfolding as an iterative exhibition over the course of three years, Iterations takes place in different durations and in various spaces across the museum, including exhibition and collection galleries, interstitial spaces and theaters.  \n\nWhile performance has often been understood as a singular event in time, dependent on the physical presence of an artist, contemporary approaches have produced a shift in this thinking. Moving between genres, spaces and durations, the artists in Iterations propose performance as a set of artistic strategies that encompass various media as well as multiple and shifting temporalities.  The series as a whole follows this iterative rhythm and exists as a hybrid between exhibition and event, suggesting how the museum can be a host to art works that emerge and disappear, re-emerge and are sustained in time. As the artists move through and produce new works in a variety of spaces across the Art Institute, each iteration in the series proposes different spatial conditions as well. The museum\u2019s theater (arguably, one of the more traditional spaces for performance) provides a radically different meaning and context than the exhibition and collection galleries or one the many interstitial and transitional spaces in the Art Institute\u2019s building. As such, iterations does not only pose the question of when and how, but also where performance can take place. \n\nFurthermore, iterations states questions that have to do with a politics of care. The Art Institute of Chicago is a caretaker of art through presentation and conservation. Increasingly, as performance has become a widespread phenomenon in museum programming and exhibitions\u2014and moving image works and sound installations similarly challenge prevalent definitions of objects and object production\u2014museums are shifting their understanding of what caretaking means in a collection context. How can museums take care of moving bodies or ephemeral gestures, of words being uttered and installations that change over time? What does the museum have to do, what does it need, in order to take care of performance\u2014both in terms of presentation and embedding it in the collection? Building on histories of instruction-based art in Conceptual Art and performance in the visual arts, iterations seeks to explore these questions through the practice of commissioning; engaging in a long-term dialogue with artists about the conception and production of, and care for a new performance work at the Art Institute of Chicago. \n\nThe following commissions will be presented in 2019:\n\nCevdet Erek (b. 1974, Istanbul, Turkey)\nchi\u00e7i\u00e7i\u00e7ichi\nFebruary 28 \u2013 April 28, 2019\nOpening performance on February 28, 2019, 6:00 pm\nKenneth and Anne Griffin Court\n\nCally Spooner (b. 1983, Ascot, United Kingdom)\nDEAD TIME (a crime novel)\nApril 22-28, 2019 \nInstallation with continuous live performance during museum opening hours\nBucksbaum Gallery 188\n\nAlexandra Bachzetsis (b. 1974, Zurich, Switzerland)\nChasing a Ghost\nOctober 31, November 1, November 2, 2019\nDaily performances, times to be announced\nChicago Stock Exchange Trading Room\n\nThe exhibition will continue in 2020 and 2021 with new works by Math Bass (b. 1981, New York, USA), Ralph Lemon (b. 1952, Cincinnati, USA), Paulina Olowska (b. 1976, Gda\u0144sk, Poland) and Evelyn T. Wang (b. 1982, Chengdu, China).\n\n\niterations is curated by Hendrik Folkerts (Dittmer Curator of Contemporary Art, Art Institute of Chicago).\n\niterations is made possible through the foundational support of the Society of Contemporary Art at the Art Institute of Chicago.",
+    "short_description": "<p>This series of new performance commissions underlines the wide range of artistic practices and attitudes in performance today.</p>",
+    "web_url": "https://nocache.www.artic.edu/exhibitions/9252/iterations",
+    "image_url": "https://artic-web.imgix.net/3c1787e1-d88c-4f8c-9e68-edc0e1aa3ade/Iterations_AlexandraBachzetsis.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=0%2C67%2C2400%2C1351",
+    "type": "AIC Only",
+    "status": "Confirmed",
+    "aic_start_at": "2019-02-28T00:00:00-06:00",
+    "aic_end_at": "2019-11-02T00:00:00-05:00",
+    "date_display": null,
+    "department_display": "Modern and Contemporary Art",
+    "gallery_id": null,
+    "gallery_title": null,
+    "artwork_ids": [],
+    "artwork_titles": [],
+    "artist_ids": [],
+    "site_ids": [],
+    "image_id": null,
+    "alt_image_ids": [],
+    "document_ids": [],
+    "suggest_autocomplete_all": {
+      "input": ["Iterations"],
+      "contexts": { "groupings": ["title"] }
+    },
+    "last_updated_source": "2021-02-24T11:57:22-06:00",
+    "last_updated": "2022-01-31T12:50:05-06:00",
+    "timestamp": "2022-01-31T16:06:08-06:00"
+  },
+  "info": {
+    "license_text": "The data in this response is licensed under a Creative Commons Zero (CC0) 1.0 designation and the Terms and Conditions of artic.edu.",
+    "license_links": [
+      "https://creativecommons.org/publicdomain/zero/1.0/",
+      "https://www.artic.edu/terms"
+    ],
+    "version": "1.2"
+  },
+  "config": {
+    "iiif_url": "https://www.artic.edu/iiif/2",
+    "website_url": "http://www.artic.edu"
+  }
+}
