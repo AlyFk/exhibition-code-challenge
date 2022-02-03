@@ -10,10 +10,12 @@ const customJestConfig = {
   moduleNameMapper: {
     '^components(.*)$': '<rootDir>/src/components$1',
     '^pages(.*)$': '<rootDir>/src/pages$1',
+    '^hooks(.*)$': '<rootDir>/src/hooks$1',
     '^gate(.*)$': '<rootDir>/src/gate$1',
     '^test-utils(.*)$': '<rootDir>/src/test-utils$1',
     '^types(.*)$': '<rootDir>/src/types$1',
     '^mocks(.*)$': '<rootDir>/src/mocks$1',
+    '^utils(.*)$': '<rootDir>/src/utils$1',
   },
   testEnvironment: 'jest-environment-jsdom',
 };
