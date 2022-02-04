@@ -1,4 +1,4 @@
-import Exhibition from '../[exhibition]';
+import Exhibition from '../[exhibition].page';
 import { NextRouter } from 'next/router';
 import { screen, waitFor } from '@testing-library/react';
 import { renderWithClient } from 'test-utils/wrapper';
