@@ -2,24 +2,15 @@ import { useRef } from 'react';
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import {
-  dehydrate,
-  QueryClient,
-  useQueryClient,
-  InfiniteData,
-} from 'react-query';
 import { ExhibitionCard } from 'components/cards';
 import { getExhibitionLayout } from 'components/layouts';
-import { getExhibitions } from 'gate';
 import { useIntersectionObserver } from 'hooks/useIntersectionObserver';
-import { useExhibitions } from 'hooks/useExhibitions';
+import exhibitionsService from 'services/exhibitions';
+
+const { prefetchExhibitions, useExhibitions } = exhibitionsService();
 
 function Home() {
   const target = useRef<HTMLDivElement>(null);
-  const isPrefetched =
-    !!useQueryClient().getQueryData<InfiniteData<typeof getExhibitions>>(
-      'exhibitions'
-    )?.pages[0];
 
   useIntersectionObserver(target, () => fetchNextPage(), {
     threshold: 0.8,
@@ -29,7 +20,7 @@ function Home() {
     { limit: 8 },
     {
       query: {
-        staleTime: isPrefetched ? 1 * 60 * 1000 : 0,
+        staleTime: 30 * 1000,
       },
     }
   );
@@ -64,15 +55,11 @@ function Home() {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const queryClient = new QueryClient();
-
-  await queryClient.prefetchInfiniteQuery('exhibitions', () =>
-    getExhibitions({ limit: 8, page: 1 })
-  );
+  const exhibitionsProps = await prefetchExhibitions(8, 1);
 
   return {
     props: {
-      dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
+      ...exhibitionsProps,
     },
   };
 };

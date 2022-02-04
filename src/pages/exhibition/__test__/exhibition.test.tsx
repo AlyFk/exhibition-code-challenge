@@ -1,4 +1,4 @@
-import Exhibition from '../[exhibitionid]';
+import Exhibition from '../[exhibition]';
 import { NextRouter } from 'next/router';
 import { screen, waitFor } from '@testing-library/react';
 import { renderWithClient } from 'test-utils/wrapper';
@@ -12,7 +12,7 @@ const mockRouter: NextRouter = {
   pathname: '/',
   route: '/',
   asPath: '/',
-  query: { exhibitionid: '9252' },
+  query: { exhibition: '9252' },
   push: jest.fn(),
   replace: jest.fn(),
   reload: jest.fn(),
