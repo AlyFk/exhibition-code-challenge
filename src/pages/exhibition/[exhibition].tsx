@@ -11,7 +11,7 @@ import { EDATEwFormat } from 'utils/dateFormater';
 import { useExhibition } from 'hooks/useExhibition';
 import type { IGetExhibitionApiResult } from 'types';
 
-const myLoader = ({ src }: { src: string }) => {
+const imgLoader = ({ src }: { src: string }) => {
   return src;
 };
 
@@ -59,7 +59,7 @@ function Exhibition() {
           </div>
           <div className="mb-4 flex flex-col lg:flex-row lg:items-start">
             <Image
-              loader={myLoader}
+              loader={imgLoader}
               src={image_url || '/placeholder-image.png'}
               unoptimized
               alt={`${title}-image`}
