@@ -3,13 +3,12 @@ import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { QueryClient, dehydrate, useQueryClient } from 'react-query';
 import axios from 'axios';
 import { getExhibitionLayout } from 'components/layouts';
-import { getExhibition } from 'gate';
 import { EDATEwFormat } from 'utils/dateFormater';
-import { useExhibition } from 'hooks/useExhibition';
-import type { IGetExhibitionApiResult } from 'types';
+import exhibitionService from 'services/exhibition';
+
+const { prefetchExhibition, useExhibition } = exhibitionService();
 
 const imgLoader = ({ src }: { src: string }) => {
   return src;
@@ -17,15 +16,11 @@ const imgLoader = ({ src }: { src: string }) => {
 
 function Exhibition() {
   const router = useRouter();
-  const { exhibitionid } = router.query;
-  const exhibitionId = parseInt(exhibitionid as string, 10);
-  const isPrefetched = !!useQueryClient().getQueryData<IGetExhibitionApiResult>(
-    `exhibition-${exhibitionId}`
-  )?.data;
+  const exhibitionId = parseInt(router.query.exhibition as string, 10);
 
   const { data, isSuccess, isLoading } = useExhibition(exhibitionId, {
     query: {
-      staleTime: isPrefetched ? 1 * 60 * 1000 : 0,
+      staleTime: 30 * 1000,
     },
   });
 
@@ -82,11 +77,10 @@ function Exhibition() {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  const exhibitionId = parseInt(params?.exhibitionid as string, 10);
-  const queryClient = new QueryClient();
+  const exhibitionId = parseInt(params?.exhibition as string, 10);
+  let exhibitionProps;
   try {
-    const data = await getExhibition(exhibitionId);
-    await queryClient.prefetchQuery(`exhibition-${exhibitionId}`, () => data);
+    exhibitionProps = await prefetchExhibition(exhibitionId);
   } catch (error) {
     if (axios.isAxiosError(error) && error.response?.status === 404)
       return {
@@ -96,7 +90,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 
   return {
     props: {
-      dehydratedState: dehydrate(queryClient),
+      ...exhibitionProps,
     },
   };
 };
