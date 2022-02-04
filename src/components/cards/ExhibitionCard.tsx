@@ -8,7 +8,7 @@ type ExhibitionCardProps = Pick<
   'title' | 'image_url' | 'aic_start_at' | 'aic_end_at'
 >;
 
-const myLoader = ({ src }: { src: string }) => {
+const imgLoader = ({ src }: { src: string }) => {
   return src;
 };
 
@@ -21,7 +21,7 @@ export const ExhibitionCard: React.FC<ExhibitionCardProps> = ({
   return (
     <div className="max-w-[313px] h-full hover:bg-gray-100">
       <Image
-        loader={myLoader}
+        loader={imgLoader}
         src={image_url || '/placeholder-image.png'}
         unoptimized
         alt={title}
