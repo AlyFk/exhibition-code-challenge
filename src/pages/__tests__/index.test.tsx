@@ -1,4 +1,4 @@
-import Home from '../index';
+import Home from '../index.page';
 import { screen, waitFor } from '@testing-library/react';
 import { renderWithClient } from 'test-utils/wrapper';
 import getMockExhibitions from 'test-utils/mockedData/exhibitions/getMockExhibitions';
