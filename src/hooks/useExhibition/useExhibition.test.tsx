@@ -1,8 +1,8 @@
 import { renderHook } from '@testing-library/react-hooks';
 import useExhibition from './useExhibition';
 import { createWrapper } from 'test-utils/wrapper';
-import { server } from 'mocks/server';
-import { exhibitionHandlerException } from 'mocks/handlers';
+import { server } from 'test-utils/mocks/server';
+import { exhibitionHandlerException } from 'test-utils/mocks/handlers';
 
 import getMockExhibition from 'test-utils/mockedData/exhibition/getMockExhibition';
 
