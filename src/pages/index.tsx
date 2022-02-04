@@ -7,8 +7,7 @@ import { getExhibitionLayout } from 'components/layouts';
 import { useIntersectionObserver } from 'hooks/useIntersectionObserver';
 import exhibitionsService from 'services/exhibitions';
 
-const { prefetchExhibitions, useExhibitions } =
-  exhibitionsService('exhibitions');
+const { prefetchExhibitions, useExhibitions } = exhibitionsService();
 
 function Home() {
   const target = useRef<HTMLDivElement>(null);

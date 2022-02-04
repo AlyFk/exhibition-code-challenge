@@ -12,7 +12,7 @@ const prefetch = async (limit: number, page: number) => {
   };
 };
 
-const exhibitionsService = (key: QueryKey) => {
+const exhibitionsService = () => {
   return {
     prefetchExhibitions: prefetch,
     useExhibitions: useExhibitions
